@@ -1,13 +1,13 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/Classes/Class.java to edit this template
- */
-package alquilar;
+package alquiler;
 
-/**
- *
- * @author EMANUEL
- */
-public class Auto {
-    
+public class Auto extends Vehiculo {
+
+    public Auto(String marca, String modelo, double tarifaBase) {
+        super(marca, modelo, tarifaBase);
+    }
+
+    @Override
+    public double calcularCosto(int dias) {
+        return (getTarifaBase() + 10) * dias;
+    }
 }
